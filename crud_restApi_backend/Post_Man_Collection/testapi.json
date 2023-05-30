@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "0f43c525-1d81-4fd3-86b4-271608ec1420",
+		"name": "testapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin & User Operations",
+			"item": [
+				{
+					"name": "Show All Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|t28CI4BwAGF4SOZGf9IdD9DeC9f52aCHYuxWeNGM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show  Post By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|t28CI4BwAGF4SOZGf9IdD9DeC9f52aCHYuxWeNGM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Posts by mail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|t28CI4BwAGF4SOZGf9IdD9DeC9f52aCHYuxWeNGM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts/search/Dhaka",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"search",
+								"Dhaka"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Operations",
+			"item": [
+				{
+					"name": "Add Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|j21RfLqjwokz6PmvUzbwppKvavgbXoxZKFawwY7E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "s",
+									"type": "default"
+								},
+								{
+									"key": "mail",
+									"value": "s",
+									"type": "default"
+								},
+								{
+									"key": "explanation",
+									"value": "s",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|j21RfLqjwokz6PmvUzbwppKvavgbXoxZKFawwY7E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ahmet Aygün",
+									"type": "default"
+								},
+								{
+									"key": "mail",
+									"value": "11",
+									"type": "default"
+								},
+								{
+									"key": "explanation",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/posts/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|fxBhwTMdCARSU3FfrbkcfG4h0p6LSpjk8Lrvn9b5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Selected Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|GzG6fhZ4LCMb1gLeuBESHU42Cgd8m0xES4yS3eBI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "post_ids[]",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "post_ids[]",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/posts/delete-selected",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"delete-selected"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|j21RfLqjwokz6PmvUzbwppKvavgbXoxZKFawwY7E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/logout/admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Operations",
+			"item": [
+				{
+					"name": "Logout User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|33YvnKhCEnwaSloODRekGfoVRiIpieC2zzvz5Iv1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/logout/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public Operations",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "user2",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "user2@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "user1@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "admin2",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "admin2@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register/admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin1@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login/admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api"
+		}
+	]
+}
